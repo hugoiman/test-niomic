@@ -1,0 +1,74 @@
+Git Init, Git Status, Git Add, Git Commmit, Git Log
+1. buka cmd
+2. ke direktori terkait
+3. git init (u/ menghubungkan dengan akun)
+4. buat file index.html (cont)
+5. git status (cek status)
+6. git add index.html (u/ stage)
+7. git commit -m "isi pesan"
+8. git log --oneline (lihat catatan perubahan)
+
+Git Branch : membuat,menghapus,pindah branch
+1. git branch (melihat branch yg ada)
+2. git branch new_name (membuat branch baru)
+3. git branch -d name_branch (menghapus branch. -posisi kita jgn di branch yg ingin dihapus)
+4. git checkout name_branch
+--ketika memodif melalui branch x, maka dibranch y tidak terlihat file yg telah di modif oleh branch x
+
+Git Checkout : dengan Commit ID
+1. git log --oneline
+2. git checkout ID_Commit -- nama_file
+
+Git Reset (hampir sserupa dg checkout)
+1. git reset ID_Commit (ID_Commit hilang, tetapi perubahan pada file tidak hilang)
+2. git reset --hard ID_Commit (ID_Commit dan perubahan pada file hilang)
+
+Git Merge : menggabungkan file
+1. git merge nama_branch_yg_ingin digabung
+*biasanya project leader yang melakukan merge agar terpusat
+
+Git Conflict : menggabungkan file yg konflik
+1. hapus bagian yg tidak perlu
+2. git add .
+3. git commit -m "isi pesan"
+
+Git Clone & Git Push
+1. Buat Repository
+2. Klik tombol Clone or Download _> copy link
+3. Buka CMD -> pilih lokasi(htdocs)
+4. git clone https://github.com/hugoiman/test-niomic.git (contoh link)
+5. Buat file baru di dalam folder tersebut
+6. git add .
+7. git commit -m "isi pesan"
+8. git push
+
+Git Push dengan branch berbeda
+1. pindah ke branch yg diinginkan (git checkout nama_branch)
+2. Modif file
+3. git add .
+4. git commit -m "isi pesan"
+5. git push origin nama_branch
+
+Git Pull : menarik semua perubahan
+1. edit file pada github web browser
+2. git pull
+* jika file di modif pada branch x, maka pilih branch x dahulu kemudian pull
+
+Git Fetch : menarik semua branch
+1. clone dahulu repository pada Github (sampai step 4) (branh default : master)
+2. git fetch (untuk menarik semua branch)
+
+Pull Request & Merge : melalui browser
+1. Ke branch yg ingin me-request disatukan
+2. Klik New pull request
+3. Isi subjek dan isi (tidak wajib)
+4. Lihat file yg ditambahkan (scroll pd browser)
+5. Klik Create Pull Request
+6. Klik Merge pull request (menyetujui request. biasa dilakukan projek leader/master)
+7. Ke branch master (belum ada perubahan di local)
+8. git pull
+
+Fork : meng copy repo org lain ke repo sendiri
+1. Ke repository yg ingin di copy
+2. Klik Fork
+3. lakukan Clone (sampai step 4)
